@@ -1,0 +1,657 @@
+{
+  "type": "FeatureCollection",
+  "name": "Gandhinagar_Cadastral_Parcels_Sector21_22",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "GJ-GND-01",
+      "properties": {
+        "ulpin": "GJ06GND000101",
+        "holderName": "Ramesh Patel & Suresh Patel",
+        "landCategory": "Residential",
+        "landUse": "Residential",
+        "areaSqM": 3250,
+        "areaAcres": 0.8,
+        "khasraNo": "142/1",
+        "sector": "Sector 21",
+        "status": "Clear",
+        "statusNote": "Joint Khata with dual co-ownership recorded under Gujarat Land Revenue Sec 135-D",
+        "isSharedOwnership": true,
+        "ownershipType": "Joint",
+        "jointConsentStatus": "Pending",
+        "coOwners": [
+          {
+            "id": "owner-1",
+            "name": "Ramesh Patel",
+            "relation": "Primary Co-Holder",
+            "share": "50%",
+            "status": "Verified",
+            "statusLabel": "🟢 eKYC Verified (DigiLocker)",
+            "mobile": "+91 98250 12345",
+            "aadhaarMasked": "•••• •••• 8492"
+          },
+          {
+            "id": "owner-2",
+            "name": "Suresh Patel",
+            "relation": "Joint Co-Holder",
+            "share": "50%",
+            "status": "Pending",
+            "statusLabel": "🟡 Pending Consent (OTP Sent)",
+            "mobile": "+91 98250 54321",
+            "aadhaarMasked": "•••• •••• 6129"
+          }
+        ],
+        "mobile": "+91 98250 12345",
+        "aadhaarMasked": "•••• •••• 8492",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 4,25,00,000",
+        "purchaseDate": "14-Jan-2021",
+        "taxStatus": "Paid (FY 2025-26)",
+        "encumbranceStatus": "Nil Encumbrance (SBI NOC Verified)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.6345,
+              23.2185
+            ],
+            [
+              72.6345,
+              23.2205
+            ],
+            [
+              72.6375,
+              23.2205
+            ],
+            [
+              72.6375,
+              23.2195
+            ],
+            [
+              72.636,
+              23.2195
+            ],
+            [
+              72.636,
+              23.2185
+            ],
+            [
+              72.6345,
+              23.2185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-02",
+      "properties": {
+        "ulpin": "GJ06GND000102",
+        "holderName": "Meenakshi Dave",
+        "landCategory": "Residential",
+        "landUse": "Residential",
+        "areaSqM": 2150,
+        "areaAcres": 0.53,
+        "khasraNo": "88/2",
+        "sector": "Sector 22",
+        "status": "Clear",
+        "statusNote": "Clear title & certified mutation entry in 7/12 RoR",
+        "mobile": "+91 97123 44556",
+        "aadhaarMasked": "•••• •••• 1928",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 1,80,00,000",
+        "purchaseDate": "08-May-2023",
+        "taxStatus": "Paid (FY 2025-26)",
+        "encumbranceStatus": "Clear Title"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.632,
+              23.214
+            ],
+            [
+              72.632,
+              23.2162
+            ],
+            [
+              72.6348,
+              23.2162
+            ],
+            [
+              72.6348,
+              23.214
+            ],
+            [
+              72.632,
+              23.214
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-03",
+      "properties": {
+        "ulpin": "MH26EAS0900003",
+        "holderName": "Sureshchandra K. Joshi",
+        "landCategory": "Industrial",
+        "landUse": "Industrial",
+        "areaSqM": 4600,
+        "areaAcres": 1.14,
+        "khasraNo": "204/A",
+        "sector": "Sector 21",
+        "status": "Flagged",
+        "statusNote": "Overlapping survey coordinate claim filed by adjacent industrial leaseholder",
+        "mobile": "+91 94280 88219",
+        "aadhaarMasked": "•••• •••• 7710",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 2,90,00,000",
+        "purchaseDate": "22-Nov-2019",
+        "taxStatus": "Disputed / Under Scrutiny",
+        "encumbranceStatus": "Cautionary Notice (Civil Suit 14/2024)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.633,
+              23.2212
+            ],
+            [
+              72.6342,
+              23.224
+            ],
+            [
+              72.638,
+              23.223
+            ],
+            [
+              72.636,
+              23.2202
+            ],
+            [
+              72.633,
+              23.2212
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-04",
+      "properties": {
+        "ulpin": "MH26DISP000008",
+        "holderName": "Vikramaditya Solanki",
+        "landCategory": "Utility",
+        "landUse": "Utility Infrastructure",
+        "areaSqM": 5120,
+        "areaAcres": 1.27,
+        "khasraNo": "319/P",
+        "sector": "Sector 22",
+        "status": "Flagged",
+        "statusNote": "Encroachment alert: Satellite NDVI shows 4.2m southern buffer violation into utility easement",
+        "mobile": "+91 98980 65432",
+        "aadhaarMasked": "•••• •••• 3341",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 3,60,00,000",
+        "purchaseDate": "04-Jul-2022",
+        "taxStatus": "Overdue (FY 2024-25)",
+        "encumbranceStatus": "Demarcation Survey Pending"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.637,
+              23.212
+            ],
+            [
+              72.636,
+              23.2135
+            ],
+            [
+              72.6382,
+              23.2152
+            ],
+            [
+              72.641,
+              23.2148
+            ],
+            [
+              72.6402,
+              23.2125
+            ],
+            [
+              72.637,
+              23.212
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-05",
+      "properties": {
+        "ulpin": "GJ06GND000105",
+        "holderName": "Snehalata R. Varma",
+        "landCategory": "Residential",
+        "landUse": "Residential",
+        "areaSqM": 1450,
+        "areaAcres": 0.36,
+        "khasraNo": "95/4",
+        "sector": "Sector 21-A",
+        "status": "Clear",
+        "statusNote": "Verified mutation deed & digital cadastral footprint",
+        "mobile": "+91 94081 77210",
+        "aadhaarMasked": "•••• •••• 5512",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 1,15,00,000",
+        "purchaseDate": "19-Oct-2020",
+        "taxStatus": "Paid (FY 2025-26)",
+        "encumbranceStatus": "Nil (HDFC Mortgage Cleared)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.6285,
+              23.217
+            ],
+            [
+              72.6285,
+              23.219
+            ],
+            [
+              72.631,
+              23.219
+            ],
+            [
+              72.631,
+              23.217
+            ],
+            [
+              72.6285,
+              23.217
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-06",
+      "properties": {
+        "ulpin": "GJ06GND000106",
+        "holderName": "Govindbhai N. Prajapati & Co-sharers",
+        "landCategory": "Agricultural",
+        "landUse": "Agricultural",
+        "areaSqM": 12800,
+        "areaAcres": 3.16,
+        "khasraNo": "512/1A",
+        "sector": "Randheja Outskirts",
+        "status": "Clear",
+        "statusNote": "Ancestral agricultural holding with verified 7/12 khatauni records",
+        "mobile": "+91 99042 18904",
+        "aadhaarMasked": "•••• •••• 9014",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 6,40,00,000",
+        "purchaseDate": "12-Mar-2015",
+        "taxStatus": "Exempt / Zero Dues",
+        "encumbranceStatus": "Nil (Kisan Credit Card regularized)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.623,
+              23.224
+            ],
+            [
+              72.6245,
+              23.2285
+            ],
+            [
+              72.6295,
+              23.2275
+            ],
+            [
+              72.6275,
+              23.2225
+            ],
+            [
+              72.623,
+              23.224
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-07",
+      "properties": {
+        "ulpin": "GJ06GND000107",
+        "holderName": "Aatman Infotech Infrastructure LLP",
+        "landCategory": "Industrial",
+        "landUse": "Industrial",
+        "areaSqM": 6200,
+        "areaAcres": 1.53,
+        "khasraNo": "620/IT",
+        "sector": "Infocity Extension",
+        "status": "Clear",
+        "statusNote": "GUDA Master Plan 2031 approved industrial layout",
+        "mobile": "+91 98240 66789",
+        "aadhaarMasked": "•••• •••• 2891",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 8,90,00,000",
+        "purchaseDate": "17-Feb-2024",
+        "taxStatus": "Paid (FY 2025-26)",
+        "encumbranceStatus": "Clear (Bank Consortium Lien Registered)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.624,
+              23.211
+            ],
+            [
+              72.624,
+              23.2142
+            ],
+            [
+              72.628,
+              23.2142
+            ],
+            [
+              72.628,
+              23.2128
+            ],
+            [
+              72.626,
+              23.2128
+            ],
+            [
+              72.626,
+              23.211
+            ],
+            [
+              72.624,
+              23.211
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-08",
+      "properties": {
+        "ulpin": "GJ06GND000108",
+        "holderName": "Dhirubhai M. Choksi",
+        "landCategory": "Utility",
+        "landUse": "Utility Infrastructure",
+        "areaSqM": 2890,
+        "areaAcres": 0.71,
+        "khasraNo": "177/3",
+        "sector": "Sector 22",
+        "status": "Flagged",
+        "statusNote": "Stamp duty under-valuation audit triggered under Section 47A & drainage easement notice",
+        "mobile": "+91 98790 32145",
+        "aadhaarMasked": "•••• •••• 4423",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 2,45,00,000",
+        "purchaseDate": "29-Sep-2023",
+        "taxStatus": "Disputed",
+        "encumbranceStatus": "Under Section 47A Audit & Easement Hold"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.6375,
+              23.2172
+            ],
+            [
+              72.639,
+              23.2198
+            ],
+            [
+              72.642,
+              23.2188
+            ],
+            [
+              72.6405,
+              23.216
+            ],
+            [
+              72.6375,
+              23.2172
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-09",
+      "properties": {
+        "ulpin": "GJ06GND000109",
+        "holderName": "Dr. Kalpesh Trivedi",
+        "landCategory": "Residential",
+        "landUse": "Residential",
+        "areaSqM": 2500,
+        "areaAcres": 0.62,
+        "khasraNo": "301/B",
+        "sector": "PDPU Corridor",
+        "status": "Clear",
+        "statusNote": "Regularized NA (Non-Agricultural) order in place",
+        "mobile": "+91 99252 81765",
+        "aadhaarMasked": "•••• •••• 6108",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 3,10,00,000",
+        "purchaseDate": "05-Jan-2022",
+        "taxStatus": "Paid (FY 2025-26)",
+        "encumbranceStatus": "Nil Encumbrance"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.643,
+              23.2145
+            ],
+            [
+              72.643,
+              23.217
+            ],
+            [
+              72.6458,
+              23.217
+            ],
+            [
+              72.6458,
+              23.2145
+            ],
+            [
+              72.643,
+              23.2145
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-10",
+      "properties": {
+        "ulpin": "GJ06GND000110",
+        "holderName": "Bhanumati R. Vaghela",
+        "landCategory": "Agricultural",
+        "landUse": "Agricultural",
+        "areaSqM": 4340,
+        "areaAcres": 1.07,
+        "khasraNo": "488/2",
+        "sector": "Randheja Agri-Belt",
+        "status": "Clear",
+        "statusNote": "Irrigated fertile farmland with certified solar pump subsidy registered",
+        "mobile": "+91 98254 99120",
+        "aadhaarMasked": "•••• •••• 3021",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 1,75,00,000",
+        "purchaseDate": "10-Aug-2018",
+        "taxStatus": "Exempt",
+        "encumbranceStatus": "Clear Title (Direct Cultivator)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.6395,
+              23.2235
+            ],
+            [
+              72.6405,
+              23.226
+            ],
+            [
+              72.644,
+              23.2255
+            ],
+            [
+              72.643,
+              23.2228
+            ],
+            [
+              72.6395,
+              23.2235
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-11",
+      "properties": {
+        "ulpin": "GJ06GND000111",
+        "holderName": "Kunal Synthetics & Tools Ltd",
+        "landCategory": "Industrial",
+        "landUse": "Industrial",
+        "areaSqM": 1950,
+        "areaAcres": 0.48,
+        "khasraNo": "102/GIDC",
+        "sector": "GIDC Sector 22",
+        "status": "Clear",
+        "statusNote": "GIDC 99-year industrial lease with verified pollution board clearance",
+        "mobile": "+91 97241 12390",
+        "aadhaarMasked": "•••• •••• 7824",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 2,10,00,000",
+        "purchaseDate": "11-Nov-2022",
+        "taxStatus": "Paid (FY 2025-26)",
+        "encumbranceStatus": "Bank of Baroda Working Capital Charge"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.6325,
+              23.2105
+            ],
+            [
+              72.6325,
+              23.2125
+            ],
+            [
+              72.635,
+              23.2125
+            ],
+            [
+              72.635,
+              23.2105
+            ],
+            [
+              72.6325,
+              23.2105
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "GJ-GND-12",
+      "properties": {
+        "ulpin": "GJ06GND000112",
+        "holderName": "Gandhinagar Municipal Corporation (GMC)",
+        "landCategory": "Utility",
+        "landUse": "Utility Infrastructure",
+        "areaSqM": 1000,
+        "areaAcres": 0.25,
+        "khasraNo": "GMC/UTIL-4",
+        "sector": "Sector 21 North",
+        "status": "Clear",
+        "statusNote": "Municipal water distribution booster station & solar feed-in grid node",
+        "mobile": "+91 79 2322 0440",
+        "aadhaarMasked": "•••• •••• 0012",
+        "aadhaarStatus": "Linked & Verified",
+        "transactionValue": "₹ 95,00,000",
+        "purchaseDate": "01-Apr-2016",
+        "taxStatus": "Exempt",
+        "encumbranceStatus": "Government Utility Asset (Inalienable)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.63,
+              23.2208
+            ],
+            [
+              72.63,
+              23.2222
+            ],
+            [
+              72.632,
+              23.2222
+            ],
+            [
+              72.632,
+              23.2208
+            ],
+            [
+              72.63,
+              23.2208
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

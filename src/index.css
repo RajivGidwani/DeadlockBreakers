@@ -1,0 +1,147 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  
+  html, body, #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Leaflet Container & Material UI Styling */
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+  background: #f1f5f9 !important;
+  font-family: var(--font-sans) !important;
+  outline: none;
+}
+
+.leaflet-tile {
+  filter: contrast(1.02) brightness(1.0);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(4px);
+  color: #64748b !important;
+  border-radius: 4px;
+  padding: 2px 6px !important;
+}
+
+/* Material Light UI Card & Glow Accents */
+.material-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+}
+
+.material-card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.material-card-hover:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Glowing outline animation for selected parcel */
+@keyframes glow-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.8)) drop-shadow(0 0 14px rgba(245, 158, 11, 0.45));
+    stroke-opacity: 0.95;
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(234, 88, 12, 0.95)) drop-shadow(0 0 22px rgba(245, 158, 11, 0.7));
+    stroke-opacity: 1;
+  }
+}
+
+@keyframes halo-expand {
+  0%, 100% {
+    stroke-width: 12px;
+    stroke-opacity: 0.35;
+  }
+  50% {
+    stroke-width: 18px;
+    stroke-opacity: 0.65;
+  }
+}
+
+.selected-parcel-boundary-glow path,
+.selected-parcel-glowing path {
+  animation: glow-pulse 1.8s ease-in-out infinite;
+}
+
+.glowing-boundary-halo path {
+  animation: halo-expand 1.8s ease-in-out infinite;
+}
+
+/* Print Styles for RoR Certificate */
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  #ror-print-area {
+    border: 2px solid #78350f !important;
+    box-shadow: none !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+    margin: 0 !important;
+  }
+}
+
+/* Clean subtle scrollbars for Light UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
