@@ -63,7 +63,7 @@ export default function AiEncroachmentModal({
             <div>
               <div className="flex items-center space-x-2">
                 <h3 className="text-base font-extrabold text-slate-900 tracking-tight">
-                  AI Cadastral Encroachment & Temporal Satellite Inspector
+                  AI Land Boundary Encroachment & Temporal Satellite Inspector
                 </h3>
                 {/* AI Confidence Badge */}
                 <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-extrabold border border-rose-200">
@@ -162,7 +162,7 @@ export default function AiEncroachmentModal({
                     <span>2026 Current High-Res (Cartosat-3 0.28m)</span>
                   </div>
 
-                  {/* Overlaid Cadastral Deviation Vector graphics */}
+                  {/* Overlaid Boundary Deviation Vector graphics */}
                   <svg className="absolute inset-0 w-full h-full pointer-events-none">
                     {/* Authorized 2022 legal boundary in green dashed */}
                     <rect x="25%" y="20%" width="45%" height="55%" fill="none" stroke="#10b981" strokeWidth="2.5" strokeDasharray="6,4" />

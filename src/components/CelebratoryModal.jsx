@@ -62,7 +62,7 @@ export default function CelebratoryModal({
 
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-200 mb-2">
             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Title Mutation Legally Sanctioned</span>
+            <span>Ownership Transfer Legally Sanctioned</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
@@ -71,7 +71,7 @@ export default function CelebratoryModal({
 
           {/* Exact Required Congratulatory Message */}
           <p className="text-sm text-slate-700 font-medium max-w-md mx-auto mt-2 leading-relaxed">
-            Congratulations <strong className="text-slate-900 font-bold">{newOwnerName}</strong>! Ownership of ULPIN <strong className="font-mono text-blue-700">{ulpinCode}</strong> ({sector}) has been legally transferred and mutated in government records.
+            Congratulations <strong className="text-slate-900 font-bold">{newOwnerName}</strong>! Ownership of ULPIN <strong className="font-mono text-blue-700">{ulpinCode}</strong> ({sector}) has been legally transferred and updated in official government records.
           </p>
         </div>
 

@@ -5,7 +5,8 @@ export default function MutationTransferModal({ parcel, onClose, onCompleteMutat
   const [buyerName, setBuyerName] = useState('');
   const [buyerPhone, setBuyerPhone] = useState('+91 98');
   const [buyerAadhaar, setBuyerAadhaar] = useState('');
-  const [saleAmount, setSaleAmount] = useState('₹ ');
+  const [notaryRegNo, setNotaryRegNo] = useState('NOT-GJ-2026-8819');
+  const [saleAmount, setSaleAmount] = useState('₹ 2,50,00,000');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
@@ -32,7 +33,24 @@ export default function MutationTransferModal({ parcel, onClose, onCompleteMutat
         newAadhaarMasked: '•••• •••• ' + buyerAadhaar.replace(/\D/g, '').slice(-4),
         saleAmount: saleAmount.trim() || '₹ 2,50,00,000',
         previousOwner: parcel.holderName,
-        transactionDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+        notaryRegNo: notaryRegNo.trim() || 'NOT-GJ-2026-8819',
+        transactionDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+        agreementDocument: {
+          fileName: `Standard_Sale_Agreement_${parcel.ulpin}_Executed.pdf`,
+          fileSize: '2.8 MB',
+          uploadedAt: 'Today',
+          banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+          notaryRegistrationNo: notaryRegNo.trim() || 'NOT-GJ-2026-8819',
+          notaryName: 'Adv. Harishchandra Dave, Notary Public',
+          notaryExecutionDate: new Date().toLocaleDateString('en-GB'),
+          notaryChamber: 'District Court, Sector 11, Gandhinagar',
+          notarySealVerified: true,
+          sellerName: parcel.holderName,
+          buyerName: buyerName.trim(),
+          stampDutyChallan: 'E-STAMP-GJ-2026-' + Math.floor(1000 + Math.random() * 9000),
+          stampDutyAmount: '₹ 12,50,000',
+          saleAmount: saleAmount.trim() || '₹ 2,50,00,000'
+        }
       });
       setIsSubmitting(false);
     }, 600);
@@ -53,10 +71,10 @@ export default function MutationTransferModal({ parcel, onClose, onCompleteMutat
             </div>
             <div>
               <h3 className="text-base font-bold text-slate-800 tracking-tight leading-none">
-                Transfer Property
+                Ownership Transfer / Record Update
               </h3>
               <p className="text-xs text-slate-500 font-medium mt-1">
-                Initiate Cadastral Title Mutation for {parcel.ulpin}
+                Initiate Ownership Transfer & Record Update for {parcel.ulpin}
               </p>
             </div>
           </div>
@@ -178,6 +196,25 @@ export default function MutationTransferModal({ parcel, onClose, onCompleteMutat
                 className="w-full pl-9 pr-3 py-2 text-sm bg-white border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-colors"
               />
             </div>
+          </div>
+
+          {/* Notary Registration Details */}
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1">
+              Notary Registration Number <span className="text-rose-500">*</span>
+            </label>
+            <input
+              id="input-notary-reg-no"
+              type="text"
+              required
+              value={notaryRegNo}
+              onChange={(e) => setNotaryRegNo(e.target.value)}
+              placeholder="e.g. NOT-GJ-2026-8819"
+              className="w-full px-3 py-2 text-sm font-mono bg-white border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+            />
+            <p className="text-[10px] text-slate-400 mt-1">
+              Executed under Standard Sale Agreement ("Bana Paper") Form 33-A
+            </p>
           </div>
 
           {/* Actions */}

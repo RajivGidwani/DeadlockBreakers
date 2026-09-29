@@ -10,7 +10,7 @@ export const ROLES = {
     name: 'Rajeshwar Sharma, IAS (Sub-Divisional Magistrate)',
     office: 'Tehsil Headquarters, North Division - Central Land Registry',
     allowedModules: ['mutation', 'encroachment', 'analytics', 'audit'],
-    tagline: 'Quasi-Judicial Land Mutation, Title Dispute Resolution & Demarcation Authority',
+    tagline: 'Quasi-Judicial Land Record Update, Title Dispute Resolution & Demarcation Authority',
     color: 'emerald'
   },
   TOWN_PLANNER: {
@@ -54,7 +54,7 @@ export const ROLES = {
 export const INITIAL_APPLICATIONS = [
   {
     id: 'APP-2026-MUT-8841',
-    category: 'Mutation Requests',
+    category: 'Ownership Transfer Requests',
     type: 'Sale Deed Transfer (Registered Conveyance)',
     applicantName: 'Vikramaditya Singhania & Ananya Singhania',
     applicantAadhaarMasked: 'XXXX-XXXX-4912',
@@ -90,7 +90,7 @@ export const INITIAL_APPLICATIONS = [
       { name: 'Registered Sale Deed (Conveyance)', fileType: 'pdf', verified: true, size: '3.8 MB', date: '2026-08-28' },
       { name: 'Latest RoR Extract (7/12 & 8-A)', fileType: 'pdf', verified: true, size: '1.2 MB', date: '2026-08-30' },
       { name: 'Aadhaar e-KYC Verification Certificate', fileType: 'pdf', verified: true, size: '850 KB', date: '2026-09-01' },
-      { name: 'Cadastral Map (Naksha) with GPS Bounds', fileType: 'image', verified: true, size: '4.5 MB', date: '2026-09-02' }
+      { name: 'Land Boundary Map (Naksha) with GPS Bounds', fileType: 'image', verified: true, size: '4.5 MB', date: '2026-09-02' }
     ],
     timeline: [
       { step: 'e-Registration Completed at Sub-Registrar', timestamp: '2026-08-28 11:42 AM', user: 'Sub-Registrar Kalol' },
@@ -100,7 +100,7 @@ export const INITIAL_APPLICATIONS = [
   },
   {
     id: 'APP-2026-MUT-8842',
-    category: 'Mutation Requests',
+    category: 'Ownership Transfer Requests',
     type: 'Succession & Inheritance (Virasat / Fauti Intiqal)',
     applicantName: 'Harpreet Kaur Dhillon & Gurmeet Dhillon',
     applicantAadhaarMasked: 'XXXX-XXXX-7110',
@@ -146,7 +146,7 @@ export const INITIAL_APPLICATIONS = [
   {
     id: 'APP-2026-SUR-5012',
     category: 'Boundary Surveys',
-    type: 'Cadastral Demarcation & Partition (Batwara)',
+    type: 'Land Boundary Demarcation & Partition (Batwara)',
     applicantName: 'Muralidhar Ramachandran',
     applicantAadhaarMasked: 'XXXX-XXXX-9938',
     applicantPhone: '+91 94440 88219',
@@ -278,7 +278,7 @@ export const INITIAL_APPLICATIONS = [
   },
   {
     id: 'APP-2026-MUT-8843',
-    category: 'Mutation Requests',
+    category: 'Ownership Transfer Requests',
     type: 'Gift Deed (Hiba / Blood Relation Conveyance)',
     applicantName: 'Nitin K. Deshmukh & Priya Deshmukh',
     applicantAadhaarMasked: 'XXXX-XXXX-1940',
@@ -322,7 +322,7 @@ export const INITIAL_APPLICATIONS = [
   },
   {
     id: 'APP-2026-MUT-8844',
-    category: 'Mutation Requests',
+    category: 'Ownership Transfer Requests',
     type: 'Court Decree Execution (Partition Suit #14/2021)',
     applicantName: 'Sanjay Rawat & Tribhuvan Rawat',
     applicantAadhaarMasked: 'XXXX-XXXX-8821',
@@ -490,7 +490,7 @@ export const INITIAL_APPLICATIONS = [
   },
   {
     id: 'APP-2026-MUT-8845',
-    category: 'Mutation Requests',
+    category: 'Ownership Transfer Requests',
     type: 'Sale Deed Transfer (Commercial Plot)',
     applicantName: 'Shri Balaji Logi-Parks Private Limited',
     applicantAadhaarMasked: 'XXXX-XXXX-7782',
@@ -531,7 +531,7 @@ export const INITIAL_APPLICATIONS = [
   },
   {
     id: 'APP-2026-MUT-8846',
-    category: 'Mutation Requests',
+    category: 'Ownership Transfer Requests',
     type: 'Agricultural Land Purchase',
     applicantName: 'Babulal Patel & Karsanbhai Patel',
     applicantAadhaarMasked: 'XXXX-XXXX-9901',
@@ -611,7 +611,7 @@ export const AI_ENCROACHMENT_ALERTS = [
     historicDate: 'Jan 2023 Baseline',
     currentDate: 'Feb 2026 Orthophoto',
     violationCategory: 'Public Right-of-Way (RoW) Encroachment',
-    description: 'Cadastral boundary displacement algorithm detected a lateral boundary wall shift of 2.8 meters outward onto the 45-meter NHAI buffer reservation line.',
+    description: 'Land boundary displacement algorithm detected a lateral boundary wall shift of 2.8 meters outward onto the 45-meter NHAI buffer reservation line.',
     baselineFeatures: 'Clear 45m setback from expressway center line with grass verge.',
     currentFeatures: 'Brick masonry boundary wall constructed 2.8m into public reservation line.',
     status: 'Action Required',
@@ -814,7 +814,7 @@ export const VILLAGE_WARD_METRICS = [
 export const API_GATEWAY_SERVICES = [
   {
     id: 'api-ror',
-    name: 'State Revenue RoR / Khasra-Khatauni Registry',
+    name: 'State Revenue RoR / Land Detail Record Registry',
     department: 'Department of Revenue & Land Records (Bhu-Aadhaar National)',
     protocol: 'REST / OpenBhuGov v2.4 (mTLS Encrypted)',
     endpoint: 'https://gateway.landstack.gov.in/api/v2/ror/query',
@@ -823,7 +823,7 @@ export const API_GATEWAY_SERVICES = [
     uptimePercent: 99.98,
     dailyTransactions: '1,420,840',
     lastSync: '12 seconds ago',
-    description: 'Real-time two-way synchronization of digital 7/12, Jamabandi, Khasra-Khatauni, and Patta records with instant lock/unlock capabilities.'
+    description: 'Real-time two-way synchronization of digital 7/12, Jamabandi, Land Detail Records, and Patta records with instant lock/unlock capabilities.'
   },
   {
     id: 'api-sro',
@@ -849,7 +849,7 @@ export const API_GATEWAY_SERVICES = [
     uptimePercent: 99.89,
     dailyTransactions: '412,010',
     lastSync: '18 seconds ago',
-    description: 'Instant verification and programmatic lien-marking of property mortgages, home loans, and bank encumbrances.'
+    description: 'Instant verification and programmatic lien-marking of property mortgages, home loans, and property claims & liabilities.'
   },
   {
     id: 'api-municipal',
@@ -875,7 +875,7 @@ export const API_GATEWAY_SERVICES = [
     uptimePercent: 99.94,
     dailyTransactions: '2,890,140',
     lastSync: '1 minute ago',
-    description: 'High-resolution 0.5m Cartosat/Sentinel multi-temporal imagery tiles and cadastral polygon overlay services.'
+    description: 'High-resolution 0.5m Cartosat/Sentinel multi-temporal imagery tiles and land boundary polygon overlay services.'
   },
   {
     id: 'api-njdg',
@@ -888,7 +888,7 @@ export const API_GATEWAY_SERVICES = [
     uptimePercent: 99.78,
     dailyTransactions: '38,910',
     lastSync: '3 minutes ago',
-    description: 'Automated lookup of civil suits, injunctions, stay orders, and pending partition litigations linked to Khasra/Survey numbers.'
+    description: 'Automated lookup of civil suits, injunctions, stay orders, and pending partition litigations linked to Land Detail / Survey numbers.'
   }
 ];
 

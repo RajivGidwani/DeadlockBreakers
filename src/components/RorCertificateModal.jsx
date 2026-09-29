@@ -119,7 +119,7 @@ export default function RorCertificateModal({
             {/* Legal Statement */}
             <div className="text-xs text-justify space-y-3 relative z-10 my-4">
               <p>
-                This is to officially certify that under the provisions of the <strong>Gujarat Land Revenue Code (GLRC)</strong> and Digital Public Infrastructure (DPI) mandate, title ownership of the below-described cadastral parcel has been duly verified, mutated, and recorded in the State Land Registry.
+                This is to officially certify that under the provisions of the <strong>Gujarat Land Revenue Code (GLRC)</strong> and Digital Public Infrastructure (DPI) mandate, title ownership of the below-described land parcel has been duly verified, updated, and recorded in the State Land Registry.
               </p>
             </div>
 
@@ -136,11 +136,11 @@ export default function RorCertificateModal({
                     <td className="py-2 px-3 font-bold text-slate-900">{ownerName}</td>
                   </tr>
                   <tr className="border-b border-slate-200 bg-slate-50/70">
-                    <td className="py-2 px-3 font-bold text-slate-600">Survey / Khasra No:</td>
-                    <td className="py-2 px-3 font-mono text-slate-800">Khasra #{khasraNo}</td>
+                    <td className="py-2 px-3 font-bold text-slate-600">Land Detail Record #:</td>
+                    <td className="py-2 px-3 font-mono text-slate-800">Land Detail Record #{khasraNo}</td>
                   </tr>
                   <tr className="border-b border-slate-200">
-                    <td className="py-2 px-3 font-bold text-slate-600">Spatial Extent / Area:</td>
+                    <td className="py-2 px-3 font-bold text-slate-600">Area Size:</td>
                     <td className="py-2 px-3 font-semibold text-slate-800">
                       {areaSqM.toLocaleString()} sq. meters ({areaAcres} Acres)
                     </td>

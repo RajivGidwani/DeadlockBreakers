@@ -62,8 +62,8 @@ export default function AuditTrail({ auditLogs = [], currentOfficer }) {
 
   const actionTypes = [
     { id: 'ALL', label: 'All Actions' },
-    { id: 'MUTATION_APPROVED', label: 'Mutation Approved' },
-    { id: 'MUTATION_REJECTED', label: 'Mutation Rejected' },
+    { id: 'MUTATION_APPROVED', label: 'Ownership Transfer Approved' },
+    { id: 'MUTATION_REJECTED', label: 'Ownership Transfer Rejected' },
     { id: 'ZONING_VERIFIED', label: 'Zoning Verified' },
     { id: 'DISPUTE_FLAGGED', label: 'Dispute Flagged' },
     { id: 'POLICY_AUDIT', label: 'Policy Audit' },
@@ -280,7 +280,7 @@ export default function AuditTrail({ auditLogs = [], currentOfficer }) {
                     TAMPER-PROOF INTEGRITY CONFIRMED
                   </div>
                   <p className="text-[11px] text-emerald-800 font-sans">
-                    Hash matches the state ledger root consensus. No byte mutation or retro-active tampering detected.
+                    Hash matches the state ledger root consensus. No unauthorized alteration or retro-active tampering detected.
                   </p>
                 </div>
               )}

@@ -117,7 +117,7 @@ export default function RejectionModal({
               rows={4}
               value={comment}
               onChange={(e) => setComment(e.target.value)}
-              placeholder="Enter detailed official findings, legal citation, or survey order reference explaining why this mutation cannot be sanctioned..."
+              placeholder="Enter detailed official findings, legal citation, or survey order reference explaining why this ownership transfer cannot be sanctioned..."
               className="w-full px-3 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-xs placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-rose-500/20 focus:border-rose-500"
             />
             <p className="text-[11px] text-slate-500 mt-1">

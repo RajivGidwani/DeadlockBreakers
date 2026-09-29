@@ -57,10 +57,10 @@ export default function PropertyDossierModal({
             </div>
             <div>
               <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight leading-snug">
-                Property Dossier - Integrated Spatial & Governance Geometry
+                Property Dossier - Property Location & Details
               </h2>
               <p className="text-xs text-slate-500 font-medium">
-                Gandhinagar Land Revenue & Cadastral Database • Bhu-Aadhaar Registry
+                Gandhinagar Land Revenue & Boundary Database • Bhu-Aadhaar Registry
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function PropertyDossierModal({
               <div>
                 <div className="flex items-center space-x-2">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                    AI Spatial Risk Card:
+                    AI Risk Assessment:
                   </span>
                   <span className={`px-2.5 py-0.5 rounded-full text-xs font-extrabold border ${
                     isFlagged 
@@ -164,8 +164,8 @@ export default function PropertyDossierModal({
                   {isFlagged
                     ? parcel.statusNote || 'Satellite temporal scan flagged potential boundary shift or land-use discrepancy.'
                     : isMediumWarning
-                    ? 'Zoning or minor encumbrance under administrative review.'
-                    : 'Cadastral geometry matches 7/12 RoR records with zero detected encroachment.'}
+                    ? 'Zoning or minor property claim under administrative review.'
+                    : 'Land boundaries match official Land Detail Records with zero detected encroachment.'}
                 </p>
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function PropertyDossierModal({
                       </span>
                     </div>
                     <p className="text-[11px] text-slate-500 font-medium mt-0.5">
-                      100% Quorum Consent Rule: All recorded co-owners must grant digital biometric consent prior to mutation.
+                      100% Quorum Consent Rule: All recorded co-owners must grant digital biometric consent prior to ownership transfer / record update.
                     </p>
                   </div>
                 </div>
@@ -324,11 +324,11 @@ export default function PropertyDossierModal({
           {/* 3 Main Governance & Spatial Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
-            {/* 1. Spatial & Land Data */}
+            {/* 1. Property Location & Details */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs space-y-2.5">
               <div className="flex items-center space-x-2 text-slate-900 font-bold text-xs border-b border-slate-100 pb-2">
                 <Compass className="w-4 h-4 text-blue-600" />
-                <span>Spatial & Land Data</span>
+                <span>Property Location & Details</span>
               </div>
               
               <div>
@@ -345,15 +345,15 @@ export default function PropertyDossierModal({
               </div>
 
               <div>
-                <span className="text-[11px] text-slate-400 block font-medium">Parcel Area</span>
+                <span className="text-[11px] text-slate-400 block font-medium">Area Size</span>
                 <span className="font-bold text-slate-800 text-xs">
                   {parcel.areaSqM.toLocaleString()} sq. m ({parcel.areaAcres} Acres)
                 </span>
               </div>
 
               <div>
-                <span className="text-[11px] text-slate-400 block font-medium">Survey / Khasra No</span>
-                <span className="font-mono font-semibold text-slate-700 text-xs">Khasra #{parcel.khasraNo}</span>
+                <span className="text-[11px] text-slate-400 block font-medium">Land Detail Record #</span>
+                <span className="font-mono font-semibold text-slate-700 text-xs">Land Detail Record #{parcel.khasraNo}</span>
               </div>
 
               <div>
@@ -401,7 +401,7 @@ export default function PropertyDossierModal({
               </div>
 
               <div>
-                <span className="text-[11px] text-slate-400 block font-medium">Cadastral Locality</span>
+                <span className="text-[11px] text-slate-400 block font-medium">Property Location & Details</span>
                 <span className="text-slate-600 text-[11px] font-medium leading-snug line-clamp-2">
                   {parcel.locality}
                 </span>
@@ -444,7 +444,7 @@ export default function PropertyDossierModal({
               </div>
 
               <div>
-                <span className="text-[11px] text-slate-400 block font-medium">Encumbrance Status</span>
+                <span className="text-[11px] text-slate-400 block font-medium">Property Claims & Liabilities</span>
                 <span className={`text-xs font-semibold ${isFlagged ? 'text-rose-600' : 'text-slate-700'}`}>
                   {parcel.encumbranceStatus}
                 </span>
@@ -500,7 +500,7 @@ export default function PropertyDossierModal({
                   className="inline-flex items-center space-x-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white text-xs font-bold rounded-xl shadow-md hover:shadow-lg transition-all ring-2 ring-emerald-400/30 active:scale-[0.98]"
                 >
                   <CheckCircle2 className="w-4 h-4 text-white" />
-                  <span>Initiate Mutation (100% Quorum Verified)</span>
+                  <span>Initiate Ownership Transfer (100% Consent Verified)</span>
                   <ArrowRight className="w-3.5 h-3.5 ml-0.5" />
                 </button>
               ) : (
@@ -533,13 +533,13 @@ export default function PropertyDossierModal({
                   <span>[ Verify via DigiLocker eKYC ]</span>
                 </button>
 
-                {/* Button 1: Standard Initiate Mutation / Transfer */}
+                {/* Button 1: Standard Initiate Transfer */}
                 <button
                   id="btn-initiate-mutation"
                   onClick={() => onInitiateMutation(parcel)}
                   className="inline-flex items-center space-x-1.5 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-bold rounded-xl shadow-sm hover:shadow transition-all ring-2 ring-blue-400/20 active:scale-[0.98]"
                 >
-                  <span>[ Initiate Mutation / Transfer ]</span>
+                  <span>[ Initiate Ownership Transfer / Record Update ]</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </>

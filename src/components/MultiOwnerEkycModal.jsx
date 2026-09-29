@@ -424,7 +424,7 @@ export default function MultiOwnerEkycModal({
                     Multi-Sig Digital Consent Receipt Auto-Generated (100% Consensus)
                   </h4>
                   <p className="text-[11px] text-emerald-700 font-normal">
-                    Cryptographic multi-signature registered into National Cadastral Vault • Proof of Consensus
+                    Cryptographic multi-signature registered into National Land Registry Vault • Proof of Consensus
                   </p>
                 </div>
               </div>
@@ -481,7 +481,7 @@ export default function MultiOwnerEkycModal({
                   </h4>
                   <p className="text-xs text-rose-700 font-medium mt-1">
                     Owner 2 (Suresh Patel) has formally declined digital consent under Gujarat Land Revenue Code Sec 135-D. 
-                    Unilateral mutation is prohibited by statutory law to safeguard against fraudulent title dispossession.
+                    Unilateral ownership transfer is prohibited by statutory law to safeguard against fraudulent title dispossession.
                   </p>
                 </div>
               </div>

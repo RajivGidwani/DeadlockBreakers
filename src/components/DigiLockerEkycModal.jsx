@@ -439,7 +439,7 @@ export default function DigiLockerEkycModal({
               <div className="p-2.5 rounded-xl bg-emerald-50/60 border border-emerald-200 text-xs text-emerald-800 flex items-center space-x-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>
-                  <strong>Security Clearance:</strong> Final title mutation execution is now <strong>UNBLOCKED</strong>.
+                  <strong>Security Clearance:</strong> Final ownership transfer execution is now <strong>UNBLOCKED</strong>.
                 </span>
               </div>
 
@@ -451,7 +451,7 @@ export default function DigiLockerEkycModal({
                   className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white text-xs font-extrabold rounded-xl shadow-md transition-all active:scale-[0.98] flex items-center justify-center space-x-2"
                 >
                   <ShieldCheck className="w-4 h-4" />
-                  <span>Accept eKYC & Proceed with Mutation</span>
+                  <span>Accept eKYC & Proceed with Ownership Transfer</span>
                 </button>
               </div>
 

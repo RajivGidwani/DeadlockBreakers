@@ -16,7 +16,7 @@ export const OFFICER_PROFILES = [
     icon: '👨‍💼',
     division: 'Gandhinagar Revenue Division (Sector 21)',
     avatarBg: 'bg-blue-600',
-    permissions: ['Approve Mutation', 'Issue Notices', 'Verify eKYC', 'Sign RoR']
+    permissions: ['Approve Ownership Transfer', 'Issue Notices', 'Verify eKYC', 'Sign Land Detail Record']
   },
   {
     id: 'po-4402',
@@ -267,7 +267,7 @@ export const INITIAL_PARCELS = [
     areaSqM: 1450,
     areaAcres: 0.36,
     status: 'Clear',
-    statusNote: 'Verified mutation deed & digital cadastral footprint',
+    statusNote: 'Verified transfer deed & digital land boundary footprint',
     holderName: 'Snehalata R. Varma',
     mobile: '+91 94081 77210',
     aadhaarMasked: '•••• •••• 5512',
@@ -508,33 +508,62 @@ export const INITIAL_PARCELS = [
   }
 ];
 
-// Initial Pending Mutation Applications for Officer Control Panel
+// Initial Pending Ownership Transfer & Record Update Applications for Officer Control Panel
 export const INITIAL_MUTATION_QUEUE = [
   {
     id: 'MUT-2026-0811',
     ulpin: 'GJ06GND000101',
     landCategory: 'Residential',
+    sellerName: 'Ramesh Patel',
     applicantName: 'Vikram & Ananya Singhania',
     applicantPhone: '+91 98231 09841',
-    type: 'Sale Deed Conveyance',
+    type: 'Ownership Transfer / Record Update',
     submissionDate: '04-Sep-2026',
-    preVerification: 'SRO Verified (e-Garvi)',
+    preVerification: 'Sub-Registrar Attested (e-Garvi)',
     status: 'Pending Review',
     saleAmount: '₹ 4,50,00,000',
-    reviewNotes: 'Sub-Registrar registration token #KAL-990 verified. Awaiting Tehsildar final eKYC & sign-off.',
+    reviewNotes: 'Standard Sale Agreement ("Bana Paper") attached and verified with Notary Registration #NOT-GJ-2026-8819. Awaiting final Official Approval & Title Transfer.',
     aiRiskLevel: 'LOW',
     aiRiskScore: '9.4%',
-    aiRiskFactors: ['Verified RoR Extract', 'Zero Bank Lien (CERSAI Clear)', 'e-Stamp Duty Fully Paid'],
+    aiRiskFactors: ['Verified Land Detail Record (7/12 RoR)', 'Zero Property Claims & Liabilities (CERSAI Clear)', 'e-Stamp Duty Reconciled'],
     mismatchAlerts: null,
-    hasEncroachment: false
+    hasEncroachment: false,
+    notaryRegNo: 'NOT-GJ-2026-8819',
+    notaryName: 'Adv. Harishchandra Dave, Notary Public (Govt. of India)',
+    executionDate: '03-Sep-2026',
+    stampChallan: 'E-STAMP-GJ-2026-9812-C',
+    agreementDocument: {
+      fileName: 'Standard_Sale_Agreement_GJ06GND000101_Executed.pdf',
+      fileSize: '2.8 MB',
+      uploadedAt: '04-Sep-2026 11:20 AM',
+      banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+      notaryRegistrationNo: 'NOT-GJ-2026-8819',
+      notaryName: 'Adv. Harishchandra Dave, Notary Public (Govt. of India)',
+      notaryExecutionDate: '03-Sep-2026',
+      notaryChamber: 'Chamber 14, District & Sessions Court, Gandhinagar',
+      notarySealVerified: true,
+      sellerName: 'Ramesh Patel',
+      buyerName: 'Vikram & Ananya Singhania',
+      stampDutyChallan: 'E-STAMP-GJ-2026-9812-C',
+      stampDutyAmount: '₹ 22,50,000',
+      saleAmount: '₹ 4,50,00,000'
+    },
+    trackingSteps: [
+      { step: 1, name: 'Submitted', status: 'completed', date: '04-Sep-2026 09:30 AM', note: 'Ownership transfer request lodged by applicant online' },
+      { step: 2, name: 'Agreement Uploaded', status: 'completed', date: '04-Sep-2026 11:20 AM', note: 'Executed Standard Sale Agreement ("Bana Paper") uploaded with ID proofs' },
+      { step: 3, name: 'Notary Review', status: 'completed', date: '04-Sep-2026 02:45 PM', note: 'Notary registration #NOT-GJ-2026-8819 and advocate seal verified' },
+      { step: 4, name: 'Official Approval', status: 'current', date: 'In Progress', note: 'Awaiting Revenue Officer final review and digital signature' },
+      { step: 5, name: 'Title Transferred', status: 'pending', date: 'Pending Step 4', note: 'Official 7/12 Land Detail Record update & digital deed issue' }
+    ]
   },
   {
     id: 'MUT-2026-0814',
     ulpin: 'MH26DISP000008',
     landCategory: 'Utility',
+    sellerName: 'Gujarat Energy Transmission Corp',
     applicantName: 'Vikramaditya Solanki',
     applicantPhone: '+91 98980 65432',
-    type: 'Utility Easement Conveyance',
+    type: 'Ownership Transfer / Record Update',
     submissionDate: '05-Sep-2026',
     preVerification: 'Disputed Boundary (NDVI Alert)',
     status: 'Under Scrutiny',
@@ -559,33 +588,89 @@ export const INITIAL_MUTATION_QUEUE = [
       sensorSource: 'ISRO Cartosat-3 (0.28m) & Sentinel-2 Orthomosaic Stream',
       surveyorRecommended: 'Demarcation Rover Unit 04',
       coordinates: [23.2136, 72.6385]
-    }
+    },
+    notaryRegNo: 'NOT-GJ-2026-4402',
+    notaryName: 'Adv. Manan Vyas, Notary Public',
+    executionDate: '04-Sep-2026',
+    stampChallan: 'E-STAMP-GJ-2026-7731-U',
+    agreementDocument: {
+      fileName: 'Standard_Sale_Agreement_MH26DISP000008.pdf',
+      fileSize: '3.1 MB',
+      uploadedAt: '05-Sep-2026 10:15 AM',
+      banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+      notaryRegistrationNo: 'NOT-GJ-2026-4402',
+      notaryName: 'Adv. Manan Vyas, Notary Public',
+      notaryExecutionDate: '04-Sep-2026',
+      notaryChamber: 'High Court Notary Registry, Ahmedabad',
+      notarySealVerified: true,
+      sellerName: 'Gujarat Energy Transmission Corp',
+      buyerName: 'Vikramaditya Solanki',
+      stampDutyChallan: 'E-STAMP-GJ-2026-7731-U',
+      stampDutyAmount: '₹ 18,00,000',
+      saleAmount: '₹ 3,60,00,000'
+    },
+    trackingSteps: [
+      { step: 1, name: 'Submitted', status: 'completed', date: '05-Sep-2026 09:00 AM', note: 'Transfer request submitted online' },
+      { step: 2, name: 'Agreement Uploaded', status: 'completed', date: '05-Sep-2026 10:15 AM', note: 'Standard Sale Agreement uploaded' },
+      { step: 3, name: 'Notary Review', status: 'completed', date: '05-Sep-2026 01:20 PM', note: 'Notary details validated' },
+      { step: 4, name: 'Official Approval', status: 'current', date: 'Under Scrutiny', note: 'Held pending boundary survey reconciliation' },
+      { step: 5, name: 'Title Transferred', status: 'pending', date: 'Pending Step 4', note: 'Awaiting resolution' }
+    ]
   },
   {
     id: 'MUT-2026-0819',
     ulpin: 'GJ06GND000105',
     landCategory: 'Residential',
+    sellerName: 'Kirit Somaiya',
     applicantName: 'Sunil & Ritu Parmar',
     applicantPhone: '+91 99099 33211',
-    type: 'Residential Transfer',
+    type: 'Ownership Transfer / Record Update',
     submissionDate: '07-Sep-2026',
     preVerification: 'e-Stamp Cleared',
     status: 'Pending Review',
     saleAmount: '₹ 1,28,00,000',
-    reviewNotes: 'e-Stamp Duty cleared. Bank mortgage NOC confirmed by HDFC API.',
+    reviewNotes: 'e-Stamp Duty cleared. Bank mortgage NOC confirmed by HDFC API. Notary seal verified.',
     aiRiskLevel: 'LOW',
     aiRiskScore: '12.1%',
-    aiRiskFactors: ['Verified RoR 7/12', 'HDFC Mortgage Release NOC', 'Tax Paid FY 2025-26'],
+    aiRiskFactors: ['Verified Land Detail Record (7/12 RoR)', 'HDFC Mortgage Release NOC', 'Tax Paid FY 2025-26'],
     mismatchAlerts: null,
-    hasEncroachment: false
+    hasEncroachment: false,
+    notaryRegNo: 'NOT-GJ-2026-5120',
+    notaryName: 'Adv. S. K. Pathak, Notary Public',
+    executionDate: '06-Sep-2026',
+    stampChallan: 'E-STAMP-GJ-2026-5512-R',
+    agreementDocument: {
+      fileName: 'Standard_Sale_Agreement_GJ06GND000105.pdf',
+      fileSize: '2.1 MB',
+      uploadedAt: '07-Sep-2026 09:40 AM',
+      banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+      notaryRegistrationNo: 'NOT-GJ-2026-5120',
+      notaryName: 'Adv. S. K. Pathak, Notary Public',
+      notaryExecutionDate: '06-Sep-2026',
+      notaryChamber: 'Civil Court, Sector 11, Gandhinagar',
+      notarySealVerified: true,
+      sellerName: 'Kirit Somaiya',
+      buyerName: 'Sunil & Ritu Parmar',
+      stampDutyChallan: 'E-STAMP-GJ-2026-5512-R',
+      stampDutyAmount: '₹ 6,40,000',
+      saleAmount: '₹ 1,28,00,000'
+    },
+    trackingSteps: [
+      { step: 1, name: 'Submitted', status: 'completed', date: '07-Sep-2026 08:30 AM', note: 'Request lodged' },
+      { step: 2, name: 'Agreement Uploaded', status: 'completed', date: '07-Sep-2026 09:40 AM', note: 'Standard Sale Agreement attached' },
+      { step: 3, name: 'Notary Review', status: 'completed', date: '07-Sep-2026 11:15 AM', note: 'Notary seal verified' },
+      { step: 4, name: 'Official Approval', status: 'current', date: 'In Progress', note: 'Ready for Tehsildar sign-off' },
+      { step: 5, name: 'Title Transferred', status: 'pending', date: 'Pending Step 4', note: 'Title conveyance' }
+    ]
   },
   {
     id: 'MUT-2026-0822',
     ulpin: 'GJ06GND000107',
     landCategory: 'Industrial',
+    sellerName: 'Gujarat Industrial Dev Corp',
     applicantName: 'CloudCore Technologies Pvt Ltd',
     applicantPhone: '+91 97250 88900',
-    type: 'Commercial Lease Transfer',
+    type: 'Ownership Transfer / Record Update',
     submissionDate: '08-Sep-2026',
     preVerification: 'FAR Zoning Variance',
     status: 'Under Scrutiny',
@@ -595,20 +680,48 @@ export const INITIAL_MUTATION_QUEUE = [
     aiRiskScore: '68.5%',
     aiRiskFactors: ['Pending Master Plan 2031 FAR Validation', 'Unsettled Urban Cess ₹ 4.2L'],
     mismatchAlerts: 'FAR Mismatch: Proposed 2.8 vs Zoned Max 2.2',
-    hasEncroachment: false
+    hasEncroachment: false,
+    notaryRegNo: 'NOT-GJ-2026-1029',
+    notaryName: 'Adv. J. N. Bhatt, Notary Public',
+    executionDate: '07-Sep-2026',
+    stampChallan: 'E-STAMP-GJ-2026-9921-I',
+    agreementDocument: {
+      fileName: 'Standard_Sale_Agreement_GJ06GND000107.pdf',
+      fileSize: '4.2 MB',
+      uploadedAt: '08-Sep-2026 08:30 AM',
+      banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+      notaryRegistrationNo: 'NOT-GJ-2026-1029',
+      notaryName: 'Adv. J. N. Bhatt, Notary Public',
+      notaryExecutionDate: '07-Sep-2026',
+      notaryChamber: 'Infocity Corporate Chamber, Gandhinagar',
+      notarySealVerified: true,
+      sellerName: 'Gujarat Industrial Dev Corp',
+      buyerName: 'CloudCore Technologies Pvt Ltd',
+      stampDutyChallan: 'E-STAMP-GJ-2026-9921-I',
+      stampDutyAmount: '₹ 46,00,000',
+      saleAmount: '₹ 9,20,00,000'
+    },
+    trackingSteps: [
+      { step: 1, name: 'Submitted', status: 'completed', date: '08-Sep-2026 08:00 AM', note: 'Request lodged' },
+      { step: 2, name: 'Agreement Uploaded', status: 'completed', date: '08-Sep-2026 08:30 AM', note: 'Agreement & Board Resolution attached' },
+      { step: 3, name: 'Notary Review', status: 'completed', date: '08-Sep-2026 10:45 AM', note: 'Notary verified' },
+      { step: 4, name: 'Official Approval', status: 'current', date: 'Under Scrutiny', note: 'Awaiting Town Planning clearance' },
+      { step: 5, name: 'Title Transferred', status: 'pending', date: 'Pending Step 4', note: 'Pending' }
+    ]
   },
   {
     id: 'MUT-2026-0825',
     ulpin: 'MH26EAS0900003',
     landCategory: 'Industrial',
+    sellerName: 'Bhaskar Desai',
     applicantName: 'Sureshchandra K. Joshi',
     applicantPhone: '+91 94280 88219',
-    type: 'Industrial Plot Partition',
+    type: 'Ownership Transfer / Record Update',
     submissionDate: '09-Sep-2026',
     preVerification: 'Active Civil Suit 14/2024',
     status: 'Pending Review',
     saleAmount: '₹ 2,90,00,000',
-    reviewNotes: 'Cautionary notice entered onto 7/12 record following civil suit 14/2024 filed by adjacent tenant.',
+    reviewNotes: 'Cautionary notice entered onto Land Detail Record following civil suit 14/2024 filed by adjacent tenant.',
     aiRiskLevel: 'HIGH',
     aiRiskScore: '91.8%',
     aiRiskFactors: ['Disputed Ownership Claim (Civil Suit 14/2024)', 'Cautionary Injunction Notice', 'Co-sharer Objection'],
@@ -617,27 +730,55 @@ export const INITIAL_MUTATION_QUEUE = [
     encroachmentDetails: {
       historicalYear: 2022,
       currentYear: 2026,
-      boundaryDeviation: 'Boundary Shift Detected: 1.8m into Neighboring Cadastre #204/B',
+      boundaryDeviation: 'Boundary Shift Detected: 1.8m into Neighboring Land Parcel #204/B',
       deviationAreaSqM: 88,
       aiConfidence: '91.8% AI Confidence Score',
       zoneType: 'Industrial Plot Demarcation',
-      sensorSource: 'ISRO Bhuvan High-Res Temporal Cadastre',
+      sensorSource: 'ISRO High-Res Temporal Land Boundary Map',
       surveyorRecommended: 'Kalol Tehsil Demarcation Team',
       coordinates: [23.2220, 72.6351]
-    }
+    },
+    notaryRegNo: 'NOT-GJ-2026-9041',
+    notaryName: 'Adv. M. C. Mehta, Notary Public',
+    executionDate: '08-Sep-2026',
+    stampChallan: 'E-STAMP-GJ-2026-3390-D',
+    agreementDocument: {
+      fileName: 'Standard_Sale_Agreement_MH26EAS0900003.pdf',
+      fileSize: '2.5 MB',
+      uploadedAt: '09-Sep-2026 09:15 AM',
+      banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+      notaryRegistrationNo: 'NOT-GJ-2026-9041',
+      notaryName: 'Adv. M. C. Mehta, Notary Public',
+      notaryExecutionDate: '08-Sep-2026',
+      notaryChamber: 'District Court, Sector 11, Gandhinagar',
+      notarySealVerified: true,
+      sellerName: 'Bhaskar Desai',
+      buyerName: 'Sureshchandra K. Joshi',
+      stampDutyChallan: 'E-STAMP-GJ-2026-3390-D',
+      stampDutyAmount: '₹ 14,50,000',
+      saleAmount: '₹ 2,90,00,000'
+    },
+    trackingSteps: [
+      { step: 1, name: 'Submitted', status: 'completed', date: '09-Sep-2026 08:45 AM', note: 'Request lodged' },
+      { step: 2, name: 'Agreement Uploaded', status: 'completed', date: '09-Sep-2026 09:15 AM', note: 'Agreement uploaded' },
+      { step: 3, name: 'Notary Review', status: 'completed', date: '09-Sep-2026 10:30 AM', note: 'Notary details logged' },
+      { step: 4, name: 'Official Approval', status: 'current', date: 'Flagged', note: 'Flagged for civil suit caveat clearance' },
+      { step: 5, name: 'Title Transferred', status: 'pending', date: 'Pending Step 4', note: 'Pending' }
+    ]
   },
   {
     id: 'MUT-2026-0828',
     ulpin: 'GJ06GND000110',
     landCategory: 'Agricultural',
+    sellerName: 'Govindbhai Patel',
     applicantName: 'Bhanumati R. Vaghela',
     applicantPhone: '+91 98254 99120',
-    type: 'Farmland Transfer',
+    type: 'Ownership Transfer / Record Update',
     submissionDate: '09-Sep-2026',
     preVerification: 'Non-Agricultural (NA) Query',
     status: 'Pending Review',
     saleAmount: '₹ 1,75,00,000',
-    reviewNotes: 'Commercial warehouse activity detected via satellite NDVI on land designated as Agricultural in 7/12.',
+    reviewNotes: 'Commercial warehouse activity detected via satellite NDVI on land designated as Agricultural in Land Detail Record.',
     aiRiskLevel: 'HIGH',
     aiRiskScore: '87.4%',
     aiRiskFactors: ['Commercial Activity Detected on Agricultural Zone', 'Unapproved Warehouse Footprint', 'Missing NA Sanction'],
@@ -653,7 +794,34 @@ export const INITIAL_MUTATION_QUEUE = [
       sensorSource: 'Sentinel-2 Multi-Spectral NDVI Vegetation-Loss Stream',
       surveyorRecommended: 'Gandhinagar Rural Revenue Inspection Team',
       coordinates: [23.2244, 72.6417]
-    }
+    },
+    notaryRegNo: 'NOT-GJ-2026-3810',
+    notaryName: 'Adv. R. K. Zala, Notary Public',
+    executionDate: '08-Sep-2026',
+    stampChallan: 'E-STAMP-GJ-2026-8810-A',
+    agreementDocument: {
+      fileName: 'Standard_Sale_Agreement_GJ06GND000110.pdf',
+      fileSize: '3.0 MB',
+      uploadedAt: '09-Sep-2026 10:00 AM',
+      banaPaperTemplate: 'Standard Sale Agreement ("Bana Paper" Form 33-A)',
+      notaryRegistrationNo: 'NOT-GJ-2026-3810',
+      notaryName: 'Adv. R. K. Zala, Notary Public',
+      notaryExecutionDate: '08-Sep-2026',
+      notaryChamber: 'Taluka Seva Sadan, Mansa / Gandhinagar',
+      notarySealVerified: true,
+      sellerName: 'Govindbhai Patel',
+      buyerName: 'Bhanumati R. Vaghela',
+      stampDutyChallan: 'E-STAMP-GJ-2026-8810-A',
+      stampDutyAmount: '₹ 8,75,000',
+      saleAmount: '₹ 1,75,00,000'
+    },
+    trackingSteps: [
+      { step: 1, name: 'Submitted', status: 'completed', date: '09-Sep-2026 09:30 AM', note: 'Farmland transfer lodged' },
+      { step: 2, name: 'Agreement Uploaded', status: 'completed', date: '09-Sep-2026 10:00 AM', note: 'Standard Sale Agreement uploaded' },
+      { step: 3, name: 'Notary Review', status: 'completed', date: '09-Sep-2026 11:30 AM', note: 'Notary stamp logged' },
+      { step: 4, name: 'Official Approval', status: 'current', date: 'In Progress', note: 'Query raised regarding NA permission' },
+      { step: 5, name: 'Title Transferred', status: 'pending', date: 'Pending Step 4', note: 'Pending' }
+    ]
   }
 ];
 
@@ -728,7 +896,7 @@ export const INTEROPERABILITY_APIS = [
   },
   {
     id: 'cersai',
-    name: 'Bank Encumbrance Registry (CERSAI / RBI)',
+    name: 'Bank Claims & Liabilities Registry (CERSAI / RBI)',
     endpoint: 'gateway.cersai.org.in/mortgage/v3',
     status: 'Connected',
     latency: '56ms',
@@ -747,7 +915,7 @@ export const INTEROPERABILITY_APIS = [
   {
     id: 'utility',
     name: 'Utility Infrastructure Grid (GUVNL & Water)',
-    endpoint: 'grid.guvnl.com/cadastral/easement/v1',
+    endpoint: 'grid.guvnl.com/boundary/easement/v1',
     status: 'Real-time Telemetry',
     latency: '41ms',
     uptime: '99.99%',
@@ -764,9 +932,9 @@ export const INITIAL_AUDIT_LOGS = [
     officerName: 'Rajesh Kumar',
     officerRole: 'Tehsildar / Revenue Officer',
     officerBadge: '#8821',
-    action: 'MUTATION_APPROVED',
+    action: 'OWNERSHIP_TRANSFER_APPROVED',
     ulpin: 'GJ06GND000105',
-    details: 'Sanctioned 7/12 RoR conveyance deed for Sunil & Ritu Parmar after DigiLocker biometric eKYC.',
+    details: 'Sanctioned 7/12 Land Detail Record conveyance deed for Sunil & Ritu Parmar after DigiLocker biometric eKYC.',
     verificationHash: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
   },
   {
@@ -790,7 +958,7 @@ export const INITIAL_AUDIT_LOGS = [
     officerBadge: '#8821',
     action: 'DISPUTE_FLAGGED',
     ulpin: 'MH26EAS0900003',
-    details: 'Cautionary notice entered onto 7/12 record following civil suit 14/2024 filing.',
+    details: 'Cautionary notice entered onto Land Detail Record following civil suit 14/2024 filing.',
     verificationHash: '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'
   },
   {
@@ -819,7 +987,7 @@ export const INITIAL_AUDIT_LOGS = [
   }
 ];
 
-// Open Basemap Configurations (NO API KEY REQUIRED)
+// Open Basemap Configurations (Default Open Tile Servers)
 export const BASEMAP_OPTIONS = [
   {
     id: 'street',
@@ -844,10 +1012,10 @@ export const BASEMAP_OPTIONS = [
   }
 ];
 
-// Standard RFC 7946 GeoJSON FeatureCollection for Gandhinagar Cadastral Parcels
+// Standard RFC 7946 GeoJSON FeatureCollection for Gandhinagar Land Parcels
 export const GANDHINAGAR_PARCELS_GEOJSON = {
   type: 'FeatureCollection',
-  name: 'Gandhinagar_Cadastral_Parcels_Sector21_22',
+  name: 'Gandhinagar_Land_Parcels_Sector21_22',
   crs: {
     type: 'name',
     properties: { name: 'urn:ogc:def:crs:OGC:1.3:CRS84' }
