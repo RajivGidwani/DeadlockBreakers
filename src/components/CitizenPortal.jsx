@@ -517,7 +517,7 @@ export default function CitizenPortal({
                   )}
 
                   {/* Interactive Map View with Boundary Polygon */}
-                  <div className="h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-slate-200 relative">
+                  <div className="h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-slate-200 relative isolate z-0">
                     <MapContainer
                       key={selectedSearchParcel.id}
                       center={selectedSearchParcel.centroid || GANDHINAGAR_CENTER}
@@ -733,7 +733,7 @@ export default function CitizenPortal({
                 </span>
               </div>
 
-              <div className="h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-slate-200 relative">
+              <div className="h-64 sm:h-72 w-full rounded-2xl overflow-hidden border border-slate-200 relative isolate z-0">
                 <MapContainer
                   center={GANDHINAGAR_CENTER}
                   zoom={16}
@@ -1563,7 +1563,7 @@ export default function CitizenPortal({
 
       {/* Mock Payment Modal */}
       {isPaymentModalOpen && (
-        <div className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-150">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-150">
           <div className="bg-white rounded-3xl p-6 max-w-md w-full shadow-2xl border border-slate-200 space-y-4">
             <div className="flex items-center justify-between border-b pb-3">
               <div className="flex items-center space-x-2">
@@ -1611,7 +1611,7 @@ export default function CitizenPortal({
 
       {/* Digital Deed Viewer Modal */}
       {viewingDeedParcel && (
-        <div className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
           <div className="bg-white rounded-3xl p-6 max-w-2xl w-full shadow-2xl border border-slate-200 space-y-4 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between border-b pb-3">
               <div className="flex items-center space-x-2">

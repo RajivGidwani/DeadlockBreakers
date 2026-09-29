@@ -69,7 +69,7 @@ export default function GandhinagarGisMap({
   };
 
   return (
-    <div className="relative w-full h-[540px] sm:h-[620px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-xs flex">
+    <div className="relative w-full h-[540px] sm:h-[620px] bg-slate-100 rounded-3xl overflow-hidden border border-slate-200 shadow-xs flex isolate z-0">
       
       {/* Top Left Civic Title Badge (Clean & Non-Obtrusive) */}
       <div className="absolute top-4 left-4 z-20 flex items-center space-x-2">

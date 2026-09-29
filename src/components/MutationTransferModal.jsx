@@ -57,7 +57,7 @@ export default function MutationTransferModal({ parcel, onClose, onCompleteMutat
   };
 
   return (
-    <div className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-150">
       <div 
         className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}

@@ -232,7 +232,7 @@ export default function AuditTrail({ auditLogs = [], currentOfficer }) {
 
       {/* Cryptographic Verification Inspector Modal */}
       {verifyingBlock && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 backdrop-blur-xs p-4">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-slate-950/60 backdrop-blur-xs p-4">
           <div className="bg-white border border-slate-200 rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl animate-in zoom-in-95 duration-200">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
               <div className="flex items-center space-x-2.5 text-slate-900 font-extrabold text-sm">

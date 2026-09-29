@@ -41,7 +41,7 @@ export default function PropertyDossierModal({
   const riskLabel = isFlagged ? 'High Encroachment Risk' : isMediumWarning ? 'Medium Warning' : 'Low Risk';
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-in fade-in duration-200">
       
       {/* Centered Modal Window */}
       <div 

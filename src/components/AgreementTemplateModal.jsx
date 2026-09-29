@@ -23,7 +23,7 @@ export default function AgreementTemplateModal({
   };
 
   return (
-    <div className="fixed inset-0 z-60 flex items-center justify-center p-3 sm:p-5 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-5 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150">
       
       {/* Centered Modal Frame */}
       <div 

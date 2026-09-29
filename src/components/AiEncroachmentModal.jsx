@@ -46,7 +46,7 @@ export default function AiEncroachmentModal({
   };
 
   return (
-    <div className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
       
       {/* Modal Container */}
       <div 

@@ -67,6 +67,11 @@ export default function GovernmentPortal({
   const [registrySearch, setRegistrySearch] = useState('');
   const [registryCategory, setRegistryCategory] = useState('ALL');
 
+  // Map Search (property search bar above GIS map)
+  const [mapSearch, setMapSearch] = useState('');
+  const [mapSearchResult, setMapSearchResult] = useState(null);
+  const [mapSearchError, setMapSearchError] = useState('');
+
   // Agreement Review Modal State
   const [previewAgreementItem, setPreviewAgreementItem] = useState(null);
 
@@ -102,6 +107,36 @@ export default function GovernmentPortal({
     return true;
   });
 
+  // Map property search handler
+  const handleMapSearch = (e) => {
+    e.preventDefault();
+    setMapSearchError('');
+    setMapSearchResult(null);
+    const q = mapSearch.trim().toLowerCase();
+    if (!q) return;
+    const found = parcels.find(
+      (p) =>
+        p.ulpin?.toLowerCase().includes(q) ||
+        p.holderName?.toLowerCase().includes(q) ||
+        p.khasraNo?.toLowerCase().includes(q) ||
+        p.sector?.toLowerCase().includes(q) ||
+        p.locality?.toLowerCase().includes(q)
+    );
+    if (found) {
+      setMapSearchResult(found);
+      onSelectParcel(found);
+    } else {
+      setMapSearchError('No property found. Try owner name, ULPIN, or Khasra number.');
+    }
+  };
+
+  const handleClearMapSearch = () => {
+    setMapSearch('');
+    setMapSearchResult(null);
+    setMapSearchError('');
+    onSelectParcel(null);
+  };
+
   return (
     <div className="space-y-6">
       
@@ -110,17 +145,86 @@ export default function GovernmentPortal({
       {/* ==================================================================== */}
       {activeTab === 'map' && (
         <div className="space-y-6">
-          <div>
-            <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight flex items-center space-x-2">
-              <Layers className="w-5 h-5 text-blue-600" />
-              <span>Land Registry Management & Land Boundary Map</span>
-            </h2>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
-              Gandhinagar Sectors 21 & 22 vector boundary canvas with parcel polygon popups, basemap layers, and official registry ledger.
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+            <div>
+              <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight flex items-center space-x-2">
+                <Layers className="w-5 h-5 text-blue-600" />
+                <span>Land Registry Management & Land Boundary Map</span>
+              </h2>
+              <p className="text-xs text-slate-500 font-medium mt-0.5">
+                Gandhinagar Sectors 21 & 22 vector boundary canvas with parcel polygon popups, basemap layers, and official registry ledger.
+              </p>
+            </div>
           </div>
 
-          {/* Interactive Leaflet Map (Clean Full Width/Height without overlay search bar or metric boxes) */}
+          {/* ── Property Search Bar ── */}
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-xs p-4">
+            <form onSubmit={handleMapSearch} className="flex flex-col sm:flex-row gap-3">
+              <div className="relative flex-1">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <input
+                  id="gov-map-property-search"
+                  type="text"
+                  value={mapSearch}
+                  onChange={(e) => { setMapSearch(e.target.value); setMapSearchError(''); setMapSearchResult(null); }}
+                  placeholder="Search by Owner Name, ULPIN (Bhu-Aadhaar), Khasra No., or Locality…"
+                  className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 focus:border-blue-400 font-mono transition"
+                />
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="submit"
+                  className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-bold shadow-xs transition-colors flex items-center space-x-1.5"
+                >
+                  <Search className="w-4 h-4" />
+                  <span>Search Property</span>
+                </button>
+                {(mapSearch || mapSearchResult) && (
+                  <button
+                    type="button"
+                    onClick={handleClearMapSearch}
+                    className="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-sm font-bold border border-slate-200 transition-colors"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
+            </form>
+
+            {/* Search Result Preview */}
+            {mapSearchResult && (
+              <div className="mt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 bg-blue-50 border border-blue-200 rounded-xl animate-in slide-in-from-top-2 duration-200">
+                <div className="flex items-center space-x-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping shrink-0" />
+                  <div>
+                    <div className="flex items-center space-x-2">
+                      <span className="font-mono font-bold text-blue-700 text-sm">{mapSearchResult.ulpin}</span>
+                      <span className="text-slate-300">|</span>
+                      <span className="font-bold text-slate-900 text-sm">{mapSearchResult.holderName}</span>
+                    </div>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      Khasra #{mapSearchResult.khasraNo} • {mapSearchResult.sector} • {mapSearchResult.areaSqM?.toLocaleString()} m²
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => onOpenDossier(mapSearchResult)}
+                  className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold shadow-xs transition-colors shrink-0"
+                >
+                  Open Dossier
+                </button>
+              </div>
+            )}
+
+            {/* Error message */}
+            {mapSearchError && (
+              <p className="mt-2.5 text-xs text-rose-600 font-medium flex items-center space-x-1.5 animate-in slide-in-from-top-2 duration-150">
+                <span>⚠</span><span>{mapSearchError}</span>
+              </p>
+            )}
+          </div>
+
+          {/* Interactive Leaflet Map */}
           <GandhinagarGisMap
             parcels={parcels}
             selectedParcel={selectedParcel}
